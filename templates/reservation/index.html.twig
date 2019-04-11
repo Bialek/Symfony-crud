@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Symfony Reservation{% endblock %}
+
+{% block body %}
+    {% if reservations %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Article Title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reservation in reservations %}
+                    <tr>
+                        <td>{{ reservation }}</td>
+                        <td>
+                            <a href="/reservation/1" class="btn btn-dark">Show</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No Reservation to display</p>
+    {% endif %}
+{% endblock %}
