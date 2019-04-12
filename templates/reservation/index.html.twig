@@ -14,9 +14,9 @@
             <tbody>
                 {% for reservation in reservations %}
                     <tr>
-                        <td>{{ reservation }}</td>
+                        <td>{{ reservation.title }}</td>
                         <td>
-                            <a href="/reservation/1" class="btn btn-dark">Show</a>
+                            <a href="/reservation/{{ reservation.id }}" class="btn btn-dark">Show</a>
                         </td>
                     </tr>
                 {% endfor %}
